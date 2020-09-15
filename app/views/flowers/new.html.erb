@@ -1,2 +1,16 @@
-<h1>Flowers#new</h1>
-<p>Find me in app/views/flowers/new.html.erb</p>
+<h3>Create a Flower</h3>
+<%= form_with model: @flower do |form| %>
+    <%= form.text_field :name, placeholder: "name of flower" %>
+    <%= form.text_field :color, placeholder: "color/colors of flower" %>
+    <%= form.text_field :season, placeholder: "main season of growth" %>
+
+    <%= form.submit %>
+
+    <% end %>
+
+    <!-- <%= form_for @flower do |form| %>
+    <%= form.text_field :name, placeholder: 'name of flower' %>
+    <%= form.text_field :color, placeholder: 'color/colors of flower' %>
+    <%= form.text_field :season, placeholder: 'main season of growth' %> 
+    <%= form.submit %>
+    <% end %> -->

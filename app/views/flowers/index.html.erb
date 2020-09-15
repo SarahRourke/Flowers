@@ -1,2 +1,20 @@
-<h1>Flowers#index</h1>
-<p>Find me in app/views/flowers/index.html.erb</p>
+<table>
+<% @flowers.each do |flower| %>
+    <tr>
+        <td><%= link_to flower.name, flower_path(flower) %></td>
+        <td><%= button_to 'Edit', edit_flower_path(flower), method: 'get' %></td>
+        <td><%= button_to 'Remove', flower_path(flower), method: 'delete', data: { confirm: 'Are you sure?' } %></td>
+
+    <% end %>
+
+    </table>
+    <%= link_to "Add a New Flower", new_flower_path %>
+
+
+
+<ul>
+
+<% @flowers.each do |flower| %>
+<li><%= link_to flower.name, flower_path(flower) %></li>
+<% end %>
+</ul>

@@ -1,2 +1,9 @@
-<h1>Flowers#edit</h1>
-<p>Find me in app/views/flowers/edit.html.erb</p>
+<h3>Update Flower Details</h3>
+<%= form_with model: @flower do |form| %>
+<%= form.text_field :name, placeholder: "name of flower" %>
+<%= form.text_field :color, placeholder: "color/colors of flower" %>
+<%= form.text_field :season, placeholder: "main season of growth" %>
+
+<%= form.submit %>
+
+<% end %>

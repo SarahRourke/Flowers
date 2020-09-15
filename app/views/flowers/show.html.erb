@@ -1,2 +1,6 @@
-<h1>Flowers#show</h1>
-<p>Find me in app/views/flowers/show.html.erb</p>
+<h1><%= @flower.name %></h1>
+<h4><%= @flower.color %></h4>
+<h5><%= @flower.season %></h5>
+
+
+<%= link_to 'Remove', @flower, method: :delete, data: { confirm: 'Are you sure?' } %>
